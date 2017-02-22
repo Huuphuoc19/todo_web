@@ -1,0 +1,1 @@
+var serverHost = 'http://localhost:3000/';

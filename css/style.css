@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+body {
+  background: #edf0f1;
+  padding: 80px 0 0 0;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+  fill: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  background: #25b99a;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+ 
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header .input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+
+}
+
+header .input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header .input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header .input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header #input-title{
+  text-indent: 18px;
+  float: left;
+  width: 30%;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 1px solid #ddd;
+}
+
+header #input-content{
+  padding: 10px 5px 5px;
+  float: left;
+  width: 70%;
+  border-radius: -0px 25px 25px 0px;
+  overflow-y: scroll;
+}
+
+
+header #input-content::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+header button {
+  width: 50px;
+  height: 50px;
+
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:2;
+
+  border-radius: 25px;
+  background: #fff;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+  fill: #25b99a;
+}
+
+
+ul.todo {
+  width: 100%;
+  float: left;
+}
+
+ul.todo li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0 0 10px 0;
+}
+
+
+ul.todo li .title h5{
+  padding-right: 20px;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+ul.todo li .title time{
+  color: #e5e7e7;
+  font-size: 10px;
+  float: left;
+  font-style: italic;
+}
+
+ul.todo li .title{
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+  background: #25b99a;
+  display: block;
+  clear: left;
+  overflow: hidden;
+  padding: 10px;  
+}
+
+
+ul.todo#completed li .title{
+    background: rgba(8, 6, 6, 0.23);
+}
+
+
+ul.todo li .content{
+  padding: 5px 0px 10px 10px;
+}
+
+ul.todo li:last-of-type {
+  margin: 0;
+}
+
+ul.todo li .buttons {
+  width: 100px;
+  height: 42px;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.todo li .buttons button:hover{
+  color: #ddd;
+}
+
+ul.todo li .buttons button {
+  width: 50px;
+  height: 100%;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 50%;
+  background: #edf0f1;
+
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+
+
+ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+
+ul.todo#completed:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
+  margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.main > .left-list{
+  overflow-y: scroll;
+}
+
+.left-title{
+  padding: 20px;
+  text-align: center;
+}
+
+.left-list .list,#add-cat {
+  border-top: 1px dashed #ddd;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+
+#add-form{
+  display: none;
+}
+
+.left-list .input-add-cat > input{
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 5px;
+}
+
+.left-list .btn-add-cat{
+  margin-top: 10px;
+}
+
+#add-cat span{
+  color: #25b99a;
+  cursor: pointer;
+}
+
+.list:hover{
+  background: #fff;
+  cursor: pointer;
+}
+
+#add-cat:hover .add-btn{
+  font-weight: bold;
+}
+
+.list .delete-cat{
+  font-size: 1.3em;
+}
+
+.list .delete-cat:hover{
+  color: #dd4b39;
+}
+
+#add-cat-btn{
+  background: #25b99a;
+  border: none;
+}
+
+html{
+  overflow-y: hidden;
+}
+
+.main-content{
+  overflow-y: scroll;
+}
+
+.list-active{
+  background: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+    html{
+      overflow-y: initial;
+    }
+
+    .main-content{
+      overflow-y: initial;
+    }
+
+}
